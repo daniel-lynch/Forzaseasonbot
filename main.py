@@ -40,7 +40,7 @@ async def on_message(message):
 
 async def discord_presence(loop):
     game = discord.Game(getseason())
-    await client.change_presence(status=discord.Status.idle, activity=game)
+    await client.change_presence(status=discord.Status.online, activity=game)
     await asyncio.sleep(1800)
     loop.create_task(discord_presence(loop))
 
