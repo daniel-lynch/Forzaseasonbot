@@ -5,7 +5,13 @@ import os
 from datetime import datetime, timedelta
 
 seasons = ["Spring", "Summer", "Autumn", "Winter"]
-spring = datetime(2020,12,10,hour=9,minute=30)
+
+game = os.environ.get('game')
+
+if game == "FH4":
+    spring = datetime(2020,12,10,hour=9,minute=30)
+if game == "FH5":
+    spring = datetime(2021,11,4,hour=9,minute=30)
 
 def getseason():
     today = datetime.now()
